@@ -3,7 +3,7 @@ import React from "react"
 const Thesis=()=>{
    return(
       <div className="page">
-         thesis
+         thesis 1
       </div>
 
    )
