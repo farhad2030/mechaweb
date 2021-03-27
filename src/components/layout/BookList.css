@@ -1,0 +1,13 @@
+.photo{
+   height: 70px;
+   width: 70px;
+}
+.description .download{
+position: relative;
+
+}
+.description .download span{
+   position: absolute;
+   right: 0px;
+   bottom: 1px;
+}

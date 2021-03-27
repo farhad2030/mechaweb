@@ -1,0 +1,59 @@
+.facultyHeading{
+   display: none;  /* for mobile view */
+}
+
+@media(max-width:650px){
+   .teachersContainer h1 ,.staffsContainer h1{
+      display: none;
+   }
+   .facultyContainer{
+      position:relative;
+   }
+   .staffsContainer{
+      position: absolute;
+      top:55px;
+   }
+   .facultyHeading{
+      display: block;
+      margin-bottom:20px;
+   }
+.heading > *{
+   height: 35px;
+   display: flex;
+   align-items: center;
+   font-size: 20px;
+}
+.heading span{
+   cursor: pointer;
+}
+   .heading div:first-child{
+      justify-content: flex-end;
+      border-right: 4px solid black;
+
+   }
+
+   .empasisStyle{
+      font-size: 25px;
+      font-weight: bold;
+      text-decoration: underline;
+      backface-visibility: hidden;
+      transition:all .3s;
+   }
+   .notTeacher{
+      transform: translateX(-102%);
+      transition: all .5s;
+   }
+   .yesTeacher{
+      transform: translateX(0%);
+      transition: all .5s;
+   }
+   .notStaff{
+      transform: translate(102%,0%);
+      transition: all .5s;
+   }
+   .yesStaff{
+      transform: translate(-3%,0%);
+      transition: all .5s;
+   }
+  
+}

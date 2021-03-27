@@ -1,0 +1,50 @@
+.searchField{
+   float: right;
+   margin: 0px 10px 10px 0px;
+   border: 1px solid #000000;
+   border-radius: 5px;
+   display: flex;
+   justify-content: flex-end;
+   width:30px;
+   transition: all .4s;
+}
+@media(max-width:650px){
+   .searchField {
+     margin-top:-35px;
+     }
+   .fieldExpand {
+     margin-top:0px;
+     }
+}
+.fieldExpand{
+   width: 98%;
+
+   transition: all .5s;
+
+}
+.search{
+   display: none;
+
+}
+.search input{
+  border: none;
+  padding:3px;
+  width: 0px;
+}
+.searchClick input:focus{
+   outline: none;
+}
+.searchClick{
+   flex-grow:2;
+   display: flex;
+   width:50px;
+} 
+.searchClick input{
+   width: 100%;
+   border: none;
+   padding:3px;
+   border-radius: 5px;
+}
+.searchIcon{
+   height: 30px;
+} 

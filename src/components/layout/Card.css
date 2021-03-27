@@ -1,0 +1,20 @@
+.cardList{
+   margin-bottom: 25px;
+}
+.cardList .cardBorder{
+   border-radius: 10px;
+   box-shadow: var(--shadow);
+   overflow: hidden;
+}
+.cardBottom{
+   background-color: var(--gray-color);;
+   width: 100%;
+   text-align: center;
+   padding: 25px 0px;
+}
+.cardBottom .button{
+   background-color: #fff;
+   border:2px solid #707070;
+   border-radius: 10px;
+   padding: 5px 30px;
+}
