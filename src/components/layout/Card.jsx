@@ -1,30 +1,27 @@
-import React, {useEffect} from 'react'
-import Aos from 'aos'
-import '../../../node_modules/aos/dist/aos.css'
+import React from 'react'
+
+import {Link} from 'react-router-dom'
+
 
 //css 
 import './Card.css'
 
 
-const Card= (params) => {
+const Card= (props) => {
 
-   useEffect(() => {
-      Aos.init({
-         duration:500
-      });
-      
-   }, [])
+
 
    return (
       <div>
          <div data-aos="zoom-in" className="cardList">
-            <div class="cardBorder">
-               <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div className="cardBorder">
+               <div className="card-body">
+                  <h5 className="card-title">{props.title}</h5>
+                  <span>{props.date}</span>
+                  <p className="card-text">{props.text}</p>
                </div>
-               <div className="cardBottom">
-                  <a href="#" class="button">Show all</a>
+               <div className= {`bottomHide  ${props.cardBottom}`}>
+                  <Link to={`/${props.dir}/${props.id}`}className="button">Show all</Link>
                </div>
 
             </div>

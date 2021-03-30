@@ -6,6 +6,7 @@
    display: flex;
    justify-content: flex-end;
    width:30px;
+   cursor: pointer;
    transition: all .4s;
 }
 @media(max-width:650px){

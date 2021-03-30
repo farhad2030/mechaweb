@@ -1,5 +1,5 @@
 import React, { } from 'react'
-import { Fade, Transform, FadeTransform, Loop } from 'react-animation-components'
+
 import LibraryItem from '../layout/LibraryItem'
 
 
