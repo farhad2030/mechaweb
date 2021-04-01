@@ -15,7 +15,8 @@ const Books = () => {
   //load bookslist from server
   const [booksList, setBooksList] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:4000/books").then((res) => {
+    axios.get("http://127.0.0.1:8000/MechApi/books/?format=json").then((res) => {
+      console.log(res.data)
       setBooksList(res.data);
     });
   }, [setBooksList]);
@@ -61,10 +62,9 @@ const Books = () => {
         {booksList.map((data) => (
           <div key={data.id} className="col-lg-4 col-md-6">
             <BookList
-              image={data.image_link}
-              link={data.download_link}
-              name={data.name}
-              writer={data.writer}
+              link={data.url}
+              name={data.title}
+              writer={data.authorName}
             />
           </div>
         ))}

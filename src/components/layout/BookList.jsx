@@ -18,11 +18,12 @@ const BookList = (props) => {
         <div className="name">{props.name}</div>
         <div className="writer">By {props.writer}</div>
         <div className="download">
-          <Link to={props.link}>
+        <a rel={'external'}
+    target="_blank" href={props.link} >
             <span>
               <GetAppIcon />
             </span>
-          </Link>
+          </a>
         </div>
       </div>
     </div>
