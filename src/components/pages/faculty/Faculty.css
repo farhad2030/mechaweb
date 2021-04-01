@@ -2,7 +2,6 @@
    display: none;  /* for mobile view */
 }
 
-@media(max-width:650px){
    .teachersContainer h1 ,.staffsContainer h1{
       display: none;
    }
@@ -35,12 +34,11 @@
    .empasisStyle{
       font-size: 25px;
       font-weight: bold;
-      text-decoration: underline;
       backface-visibility: hidden;
       transition:all .3s;
    }
    .notTeacher{
-      transform: translateX(-105%);
+      transform: translateX(-200%);
       transition: all .5s;
    }
    .yesTeacher{
@@ -48,7 +46,7 @@
       transition: all .5s;
    }
    .notStaff{
-      transform: translate(102%,0%);
+      transform: translate(200%,0%);
       transition: all .5s;
    }
    .yesStaff{
@@ -56,4 +54,3 @@
       transition: all .5s;
    }
   
-}

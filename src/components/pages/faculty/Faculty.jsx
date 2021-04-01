@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
+
 //css
 import "./Faculty.css";
+
 
 //compoment
 import StaffList from "../../layout/StaffList";
@@ -97,7 +100,9 @@ const Faculty = () => {
 
             {staffsList.map((data,i) => (
               <div key={data.id} className="col-lg-4">
+               {/* <Grow> */}
                 <StaffList name={data.name} designation={data.designations} email={data.email} imageLink={data.imageLink}/>
+                {/* </Grow> */}
               </div>
             ))}
 

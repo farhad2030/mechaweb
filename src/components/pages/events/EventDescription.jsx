@@ -17,7 +17,7 @@ export const EventDescrption = () => {
 
   useEffect(() => {
     let a = [];
-    eventList.map((dat, i) => (dat.id == eventId ? a.push(dat) : null));
+    eventList.map((dat, i) => (String(dat.id)=== eventId ? a.push(dat) : null));
     setEvent(a);
     // console.log(event);
   }, [eventList,eventId]);
