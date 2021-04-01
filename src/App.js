@@ -20,7 +20,7 @@ import Books from "./components/pages/books/Books";
 import Event from "./components/pages/events/Event";
 import Alumni from "./components/pages/Alumni";
 import Login from "./components/pages/login/Login";
-import Thesis from "./components/pages/Thesis";
+import Facebook from "./components/pages/Thesis";
 import Projects from "./components/pages/Projects";
 
 import Questions from "./components/pages/questions/Questions";
@@ -47,7 +47,7 @@ function App() {
 
           <Route exact path="/library" component={Library} />
           <Route exact path="/library/books" component={Books} />
-          <Route exact path="/library/thesis" component={Thesis} />
+          <Route exact path="/library/thesis" component={Facebook} />
           <Route exact path="/library/projects" component={Projects} />
           <Route exact path="/library/questions" component={Questions} />
           <Route

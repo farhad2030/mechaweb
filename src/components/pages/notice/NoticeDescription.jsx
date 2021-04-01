@@ -18,7 +18,7 @@ export const NoticeDescription = () => {
 
   useEffect(() => {
     let a = [];
-    noticeList.map((dat, i) => (dat.id == noticeId ? a.push(dat) : null));
+    noticeList.map((dat, i) => (String(dat.id)=== noticeId ? a.push(dat) : null));
     setNotice(a);
     //  console.log(notice);
   }, [noticeList,noticeId]);

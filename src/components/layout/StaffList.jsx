@@ -1,10 +1,15 @@
 import React from "react";
 
+
 import "./StaffList.css";
 
+
 const StaffsList = (props) => {
-  return (
-    <div data-aos="zoom-out" className="listBody">
+  
+  return(
+    
+  
+    <div data-aos="zoom-in" className="listBody">
       <div className="profilePic col-4">
         <img src={props.imageLink} alt="profile" />
       </div>
@@ -14,6 +19,7 @@ const StaffsList = (props) => {
         <div className="email">{props.email}</div>
       </div>
     </div>
+ 
   );
 };
 export default StaffsList;
