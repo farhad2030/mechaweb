@@ -39,13 +39,7 @@
 .MEE .eng {
   font-size: 14px;
 }
-.fullWidth{
-  position: relative;
-  top:0px;
-  left:0px;
-  height: 100vh;
-  z-index: -1;
-}
+
 nav ul {
   position: absolute;
   right: 0px;
@@ -94,7 +88,7 @@ nav li a:hover::after {
 @media (max-width: 750px) {
   nav ul {
     top: 280px;
-    right: 25px;
+    right: 00px;
     transition: all 0.5s;
   }
   nav ul li {
