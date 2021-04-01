@@ -1,6 +1,6 @@
-import React, { useEffect} from 'react'
-import Aos from 'aos'
-import '../../../node_modules/aos/dist/aos.css'
+import React from 'react'
+
+
 
 
 
@@ -8,14 +8,10 @@ import '../../../node_modules/aos/dist/aos.css'
 import './LibraryItem.css'
 
 const LibraryItem = (props) => {
-   useEffect(() => {
-      Aos.init({ duration: 1000 ,
-         
-      })
-   }, [])
+ 
 
    return (
-      <div data-aos="zoom-in"  className="libraryList">
+      <div data-aos="zoom-in" className="libraryList">
          <div className="listBody" >
 
             <div className="description col-8">
@@ -24,7 +20,7 @@ const LibraryItem = (props) => {
                </div>
             </div>
             <div className="infoPic  col-4">
-               <img src={props.image} alt="profile photo" />
+               <img src={props.image} alt="profile" />
             </div>
 
          </div>

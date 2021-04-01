@@ -6,7 +6,11 @@
    box-shadow: var(--shadow);
    overflow: hidden;
 }
+.bottomHide{
+   display: none;
+}
 .cardBottom{
+   display: block !important;
    background-color: var(--gray-color);;
    width: 100%;
    text-align: center;
@@ -18,3 +22,4 @@
    border-radius: 10px;
    padding: 5px 30px;
 }
+

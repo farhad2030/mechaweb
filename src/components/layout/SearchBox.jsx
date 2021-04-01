@@ -5,7 +5,7 @@ import SearchIcon from '@material-ui/icons/Search';
 //css 
 import './SearchBox.css';
 
-const SearchBox = () => {
+const SearchBox = (props) => {
    const [isSearch, setIsSearch] = useState(false);
 
    const searchClick = () => {
@@ -17,7 +17,7 @@ const SearchBox = () => {
          {/* <input classsName="searchField" type="text" /> */}
          <div className={isSearch ? "searchField fieldExpand" : "searchField"}>
             <span className={isSearch ? "searchClick" : "search "}>
-               <input type="text" />
+               <input type="text" placeholder={props.placeholder}/>
             </span>
             <span className="searchIcon" onClick={searchClick}>
                <SearchIcon />
