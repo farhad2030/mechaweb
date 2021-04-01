@@ -1,17 +1,11 @@
 import React from "react";
 import "./Login.css";
-import {Link} from 'react-router-dom'
-
 
 const Login = () => {
-  
-
   return (
     <div className="page container">
 
-
-
-
+ 
       
       <div className="row">
         <div className="col-lg-4 offset-lg-4 ">
@@ -26,7 +20,7 @@ const Login = () => {
                 </button>
               </form>
               <div>
-                <Link to="#">Forgetten password ?</Link>
+                <a href="#">Forgetten password ?</a>
               </div>
               {/* <div id="registerNow" onClick="moveRegister()"> */}
                 Register Now !
