@@ -16,7 +16,7 @@ const Session = () => {
   // console.log(semester);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/questionsList").then((res) => {
+    axios.get("http://127.0.0.1:8000/MechApi/questions").then((res) => {
       setQuestionList(res.data);
     });
   }, [setQuestionList]);

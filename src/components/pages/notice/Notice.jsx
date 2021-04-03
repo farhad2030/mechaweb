@@ -6,10 +6,12 @@ import Card from "../../layout/Card";
 const Notice = () => {
   const [noticeList, setNoticeList] = useState([]);
   useEffect(() => {
-    axios.get("  http://localhost:4000/notice").then((res) => {
+    axios.get(" http://127.0.0.1:8000/MechApi/notices/?format=json").then((res) => {
       setNoticeList(res.data);
     });
+
   }, [setNoticeList]);
+
   return (
     <div className="page">
       <div className="container">
@@ -17,14 +19,8 @@ const Notice = () => {
         <div className="row">
           {noticeList.map((val, i) => (
             <div key={val.id} className="col-xl-3 col-md-4 col-12">
-              <Card
-                id={val.id}
-                cardBottom="cardBottom"
-                text={`${val.description.slice(0,100)}  . . . .`}
-                title={val.title}
-                date={val.date}
-                dir={"notice"}
-              />
+             <p>{val.title}</p>
+              <img src={val.imageURL} alt=""/>
             </div>
           ))}
         </div>

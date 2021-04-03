@@ -7,29 +7,27 @@ import "./Faculty.css";
 import StaffList from "../../layout/StaffList";
 
 const Faculty = () => {
-
-   //for teachers data
+  //for teachers data
   const [teachersList, setTeachersList] = useState([]);
-  
-  useEffect(() => {
-    axios.get("http://localhost:4000/teachers").then((res) => {
-      setTeachersList(res.data)
-    });
-  }, [setTeachersList]);
 
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/MechApi/teachers/?format=json")
+      .then((res) => {
+        setTeachersList(res.data);
+      });
+  }, [setTeachersList]);
 
   //for staffs data
   const [staffsList, SetStaffsList] = useState([]);
-  
+
   useEffect(() => {
-    axios.get("http://localhost:4000/teachers").then((res) => {
-      SetStaffsList(res.data)
-    });
+    axios
+      .get("http://127.0.0.1:8000/MechApi/staffs/?format=json")
+      .then((res) => {
+        SetStaffsList(res.data);
+      });
   }, [SetStaffsList]);
-
-
-
-
 
   //for className add
   let [isTeacher, setIsTeacher] = useState(true);
@@ -42,65 +40,74 @@ const Faculty = () => {
   };
 
   return (
-    <div className="page">
-      <div className="container facultyContainer ">
-        <div className="row facultyHeading ">
-          <div className="row heading">
-            <div className="col-6 ">
-              <span
-                className={isTeacher ? "empasisStyle" : ""}
-                onClick={teacherDrag}
-              >
-                TEACHERS
-              </span>
-            </div>
-            <div className="col-6">
-              <span
-                className={isTeacher ? "" : "empasisStyle"}
-                onClick={staffDrag}
-              >
-                {" "}
-                STAFFS
-              </span>
-            </div>
+    <div className="page faculty">
+      <div className="container facultyHeading">
+        <div className="row heading">
+          <div className="col-6 ">
+            <span
+              className={isTeacher ? "empasisStyle" : ""}
+              onClick={teacherDrag}
+            >
+              TEACHERS
+            </span>
+          </div>
+          <div className="col-6">
+            <span
+              className={isTeacher ? "" : "empasisStyle"}
+              onClick={staffDrag}
+            >
+              {" "}
+              STAFFS
+            </span>
           </div>
         </div>
+      </div>
 
+      <div className="container-fluid facultyList">
         <div className="container-fluid">
-          <div
-            className={
-              isTeacher
-                ? "yesTeacher row teachersContainer"
-                : "notTeacher row teachersContainer"
-            }
-          >
-            <h1 className="mb-3">TEACHERS</h1>
-
-            {teachersList.map((data,i) => (
-              <div key={data.id} className="col-lg-4">
-                <StaffList name={data.name} designation={data.designations} email={data.email} imageLink={data.imageLink}/>
+          <div className="row">
+            <div
+              className={
+                isTeacher
+                  ? "teachersContainer col-lg-12 "
+                  : "col-lg-12  notTeacher"
+              }
+            >
+              <div className="row">
+                {teachersList.map((data, i) => (
+                  <div key={data.id} className="col-lg-4 col-md-6">
+                    {/* <Grow> */}
+                    <StaffList
+                      name={data.name}
+                      designation={data.designation}
+                      email={data.email}
+                      imageLink={data.photoURL}
+                    />
+                    {/* </Grow> */}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="container-fluid">
-          <div
-            className={
-              isTeacher
-                ? "row notStaff  staffsContainer"
-                : "row yesStaff staffsContainer"
-            }
-          >
-            <h1 className="mt-5 mb-3">STAFFS</h1>
-         
-
-            {staffsList.map((data,i) => (
-              <div key={data.id} className="col-lg-4">
-                <StaffList name={data.name} designation={data.designations} email={data.email} imageLink={data.imageLink}/>
+            </div>
+            <div
+              className={
+                isTeacher ? "notStaff col-lg-12 " : "col-lg-12  staffsContainer"
+              }
+            >
+              <div className="row">
+                {staffsList.map((data, i) => (
+                  <div key={data.id} className="col-lg-4  col-md-6">
+                    {/* <Grow> */}
+                    <StaffList
+                      name={data.name}
+                      designation={data.designation}
+                      email={data.email}
+                      imageLink={data.photoURL}
+                    />
+                    {/* </Grow> */}
+                  </div>
+                ))}
               </div>
-            ))}
-
+            </div>
           </div>
         </div>
       </div>

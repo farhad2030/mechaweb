@@ -11,7 +11,7 @@ export const NoticeDescription = () => {
   const [notice, setNotice] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/notice").then((res) => {
+    axios.get("http://127.0.0.1:8000/MechApi/notices/?format=json").then((res) => {
       setNoticeList(res.data);
     });
   }, []);
@@ -28,13 +28,9 @@ export const NoticeDescription = () => {
       <div className="row">
         <div className="offset-lg-2 col-lg-8 col-md-12">
           {notice.map((dat, i) => (
-            <Card
-              key={dat.id}
-              title={dat.title}
-              text={dat.description}
-              date={dat.date}
-            />
-          ))}
+           <img src={dat.imageURL} alt="fdg"/>
+           
+          ))}{notice.imageURL}
         </div>
       </div>
     </div>

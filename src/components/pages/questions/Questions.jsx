@@ -11,7 +11,7 @@ const Questions = () => {
       loadData();
    }, [])
    const loadData = async () => {
-      const result = await axios.get("http://localhost:4000/questionsList")
+      const result = await axios.get("http://127.0.0.1:8000/MechApi/questions")
       setQuestionList(result.data);
    }
    return (
