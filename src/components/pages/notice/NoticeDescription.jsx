@@ -28,7 +28,7 @@ export const NoticeDescription = () => {
       <div className="row">
         <div className="offset-lg-2 col-lg-8 col-md-12">
           {notice.map((dat, i) => (
-           <img src={dat.imageURL} alt="fdg"/>
+           <img src={dat.imageURL} alt="notice"/>
            
           ))}{notice.imageURL}
         </div>

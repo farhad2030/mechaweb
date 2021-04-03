@@ -60,7 +60,7 @@ const Books = () => {
 
       <div className="row">
         {booksList.map((data) => (
-          <div key={data.id} className="col-lg-4 col-md-6">
+          <div key={data.id} className="col-lg-3 col-md-4">
             <BookList
               link={data.url}
               name={data.title}

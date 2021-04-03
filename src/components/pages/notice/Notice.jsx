@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Card from "../../layout/Card";
+import './notice.css'
 
 const Notice = () => {
   const [noticeList, setNoticeList] = useState([]);
@@ -18,9 +18,13 @@ const Notice = () => {
         <h1 className="mb-4">Notice</h1>
         <div className="row">
           {noticeList.map((val, i) => (
-            <div key={val.id} className="col-xl-3 col-md-4 col-12">
+            <div key={val.id} className="  col-xl-3 col-md-4 col-12 p-3 notice">
              <p>{val.title}</p>
-              <img src={val.imageURL} alt=""/>
+             <p className="">date</p>
+             <div className="noticeImage">
+              
+             <a target="blank" href={val.imageURL}> <img src={val.imageURL} alt=""/>  <p> <span>Show all</span></p></a>  
+             </div>
             </div>
           ))}
         </div>
