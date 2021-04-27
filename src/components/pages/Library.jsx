@@ -1,5 +1,5 @@
 import React, { } from 'react'
-
+import {Helmet} from "react-helmet";
 import LibraryItem from '../layout/LibraryItem'
 
 
@@ -13,6 +13,11 @@ import { Link } from 'react-router-dom'
 const Library = () => {
    return (
       <div className="page">
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>MEE SUST / LIBRARY </title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
          <div className="container">
             <h1 className="mb-4">Library</h1>
 

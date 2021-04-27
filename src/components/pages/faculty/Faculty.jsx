@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import {Helmet} from "react-helmet"
 //css
 import "./Faculty.css";
 
@@ -41,6 +42,11 @@ const Faculty = () => {
 
   return (
     <div className="page faculty">
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>MEE SUST / FACULTY </title>
+               
+            </Helmet>
       <div className="container facultyHeading">
         <div className="row heading">
           <div className="col-6 ">

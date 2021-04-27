@@ -15,13 +15,12 @@ const Event = () => {
     <div className="page">
           <Helmet>
                 <meta charSet="utf-8" />
-                <title>MEE SUST / EVENT </title>
-                <link rel="canonical" href="http://mysite.com/example" />
+                <title>MEE SUST / ACTIVITIES </title>
             </Helmet>
       <div className="container">
-        <h1 className="mb-4">Event</h1>
+        <h1 className="mb-4">Activities</h1>
         <div className="row">
-          {eventList.map((val, i) => (
+          {eventList.map((val) => (
             <div key={val.id}className="col-xl-3 col-md-4 col-12">
               <Card
               dir={"event"}

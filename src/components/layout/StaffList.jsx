@@ -12,6 +12,9 @@ const StaffsList = (props) => {
         <div className="name">{props.name}</div>
         <div className="designation">{props.designation}</div>
         <div className="email">{props.email}</div>
+        <div className="linkinid">{props.linkedinId}</div>
+        <div className="session">{props.session}</div>
+        <div className="reg">{props.reg}</div>
       </div>
     </div>
   );

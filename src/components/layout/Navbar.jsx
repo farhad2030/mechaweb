@@ -46,16 +46,16 @@ const Navbar = () => {
             <li onClick={navToggle}>
               <Link to="/event">Event</Link>
             </li>
-            {/* <li onClick={navToggle}>
+            <li onClick={navToggle}>
               <Link to="/alumni">Alumni</Link>
-            </li> */}
-            {/* <li
+            </li>
+            <li
               data-toggle="modal"
               data-target="#exampleModalCenter"
               onClick={navToggle}
             >
               <Link to="/login">LOG IN</Link>
-            </li> */}
+            </li>
           </ul>
         </div>
 

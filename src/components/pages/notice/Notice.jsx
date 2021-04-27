@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import {Helmet} from "react-helmet";
 
 import './notice.css'
 
@@ -14,6 +15,11 @@ const Notice = () => {
 
   return (
     <div className="page">
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>MEE SUST / NOTICE </title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <div className="container">
         <h1 className="mb-4">Notice</h1>
         <div className="row">
