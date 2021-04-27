@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import {Helmet} from "react-helmet";
 import List from '../../smallComponents/List'
 
 
@@ -16,6 +16,11 @@ const Questions = () => {
    }
    return (
       <div className="page container">
+           <Helmet>
+                <meta charSet="utf-8" />
+                <title>MEE SUST / QUESTIONS </title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
          <h1>Questions</h1>
          <div className="row">
             <div className="col-lg-4 offset-lg-4">

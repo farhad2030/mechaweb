@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import BookList from "../../layout/BookList";
+import {Helmet} from "react-helmet";
 
 //Seach box css
 import "../../layout/SearchBox.css";
@@ -32,6 +33,11 @@ const Books = () => {
 
   return (
     <div className="page container">
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>MEE SUST / BOOKS </title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <div className="row">
         <div className="col-lg-8">
           <h1>Books {searchText}</h1>

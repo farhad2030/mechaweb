@@ -3,9 +3,17 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import Card from "../layout/Card";
 
+import {Helmet} from "react-helmet";
+
 const Home = () => {
   return (
     <div className="page container">
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>MEE SUST </title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
+
       <div className="row" style={{ height: "400px", overflow: "hidden" }}>
         <Carousel
           showArrows={true}
