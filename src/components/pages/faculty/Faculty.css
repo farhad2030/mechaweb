@@ -1,5 +1,6 @@
 .faculty {
   position: relative;
+  margin-top: 200px;
 }
 
 .facultyList {
@@ -70,4 +71,27 @@
   font-weight: bold;
   backface-visibility: hidden;
   transition: all 0.3s;
+}
+/* test */
+
+.facultyContainer {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: auto;
+  background-color: royalblue;
+  overflow: hidden;
+}
+.teachersContainer0 {
+  width: 100vw;
+  background-color: rgb(53, 172, 104);
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  /* transform: translateX(90vw);  */
+}
+.staffsContainer0 {
+  position: absolute;
+  width: 100vw;
+  background-color: salmon;
 }

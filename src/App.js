@@ -28,6 +28,7 @@ import Session from "./components/pages/questions/Session";
 import { NoticeDescription } from "./components/pages/notice/NoticeDescription";
 import { QuestionsList } from "./components/pages/questions/QuestionsList";
 import { EventDescrption } from "./components/pages/events/EventDescription";
+import Footer from "./components/layout/Footer";
 
 function App() {
   aos.init({
@@ -66,6 +67,7 @@ function App() {
           <Route exact path="/alumni" component={Alumni} />
           <Route exact path="/login" component={Login} />
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );
